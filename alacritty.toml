@@ -1,0 +1,30 @@
+import = ["/home/denzel/.config/alacritty/themes/themes/everblush.toml"]
+
+[cursor.style]
+blinking = "On"
+shape = "Beam"
+
+[font]
+size = 13.25
+
+[font.normal]
+family = "FiraMono Nerd Font Mono"
+style = "Regular"
+
+[mouse]
+hide_when_typing = true
+
+[window]
+blur = true
+dynamic_padding = true
+dynamic_title = false
+opacity = 0.5
+title = "Terminal - Alacritty"
+
+[window.dimensions]
+columns = 100
+lines = 30
+
+[window.padding]
+x = 2
+y = 2
