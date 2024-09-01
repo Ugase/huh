@@ -1,4 +1,4 @@
-sudo pacman -S --needed go neovim sddm-kcm fastfetch npm wget alacritty fish
+sudo pacman -S --needed go neovim sddm-kcm fastfetch npm alacritty fish
 sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 git clone -b v2.0 https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
 rm -rf ~/.config/nvim/lua/custom/
