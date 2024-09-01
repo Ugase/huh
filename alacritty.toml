@@ -1,4 +1,4 @@
-import = ["/home/denzel/.config/alacritty/themes/themes/everblush.toml"]
+import = ["~/.config/alacritty/themes/themes/everblush.toml"]
 
 [cursor.style]
 blinking = "On"
