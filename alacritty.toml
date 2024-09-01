@@ -18,7 +18,7 @@ hide_when_typing = true
 blur = true
 dynamic_padding = true
 dynamic_title = false
-opacity = 0.5
+opacity = 0.9
 title = "Terminal - Alacritty"
 
 [window.dimensions]
