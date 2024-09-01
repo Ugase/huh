@@ -6,8 +6,9 @@ git clone https://github.com/dreamsofcode-io/neovim-python.git ~/.config/nvim/lu
 mkdir -p ~/.config/fish/
 mkdir -p ~/.config/alacritty/themes/
 mkdir -p ~/.config/fastfetch/
-curl https://raw.githubusercontent.com/Everblush/terminal-emulators/main/src/alacritty/Everblush.toml > ~/.config/alacritty/themes/
+curl https://raw.githubusercontent.com/Everblush/terminal-emulators/main/src/alacritty/Everblush.toml > ~/.config/alacritty/themes/everblush.toml
 mv alacritty.toml ~/.config/alacritty/alacritty.toml
 mv config.jsonc ~/.config/fastfetch/config.jsonc
+mv config.fish ~/.config/fish/config.fish
 sudo mv FiraMonoNerdFont-Regular.otf /usr/local/share/fonts/
 sudo mv PixelifySans-VariableFont_wght.ttf /usr/local/share/fonts/
