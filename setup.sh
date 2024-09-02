@@ -36,13 +36,13 @@ mkdir -p ~/.config/alacritty/themes/
 mkdir -p ~/.config/fastfetch/
 echo "Copying Fonts"
 echo "------------"
-sudo cp -f $PWD/FiraMonoNerdFont-Regular.otf /usr/local/share/fonts/
-sudo cp -f $PWD/PixelifySans-VariableFont_wght.ttf /usr/local/share/fonts/
+sudo cp -fv $PWD/FiraMonoNerdFont-Regular.otf /usr/local/share/fonts/
+sudo cp -fv $PWD/PixelifySans-VariableFont_wght.ttf /usr/local/share/fonts/
 echo "Installing alacritty theme"
 echo "--------------------------"
 curl https://raw.githubusercontent.com/Everblush/terminal-emulators/main/src/alacritty/Everblush.toml > ~/.config/alacritty/themes/everblush.toml
 echo "Copying config files"
 echo "-------------------"
-cp -f $PWD/alacritty.toml ~/.config/alacritty/alacritty.toml
-cp -f $PWD/config.jsonc ~/.config/fastfetch/config.jsonc
-cp -f $PWD/config.fish ~/.config/fish/config.fish
+cp -fv $PWD/alacritty.toml ~/.config/alacritty/alacritty.toml
+cp -fv $PWD/config.jsonc ~/.config/fastfetch/config.jsonc
+cp -fv $PWD/config.fish ~/.config/fish/config.fish
