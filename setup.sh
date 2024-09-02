@@ -35,13 +35,13 @@ mkdir -p ~/.config/alacritty/themes/
 mkdir -p ~/.config/fastfetch/
 echo "Moving Fonts"
 echo "------------"
-sudo mv ./FiraMonoNerdFont-Regular.otf /usr/local/share/fonts/
-sudo mv ./PixelifySans-VariableFont_wght.ttf /usr/local/share/fonts/
+sudo mv FiraMonoNerdFont-Regular.otf /usr/local/share/fonts/
+sudo mv PixelifySans-VariableFont_wght.ttf /usr/local/share/fonts/
 echo "Installing alacritty theme"
 echo "--------------------------"
 curl https://raw.githubusercontent.com/Everblush/terminal-emulators/main/src/alacritty/Everblush.toml > ~/.config/alacritty/themes/everblush.toml
 echo "Moving config files"
 echo "-------------------"
-mv ./alacritty.toml ~/.config/alacritty/alacritty.toml
-mv ./config.jsonc ~/.config/fastfetch/config.jsonc
-mv ./config.fish ~/.config/fish/config.fish
+mv alacritty.toml ~/.config/alacritty/alacritty.toml
+mv config.jsonc ~/.config/fastfetch/config.jsonc
+mv config.fish ~/.config/fish/config.fish
