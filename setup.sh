@@ -23,6 +23,7 @@ echo "Installing packages"
 echo "-------------------"
 sudo pacman -S --needed go neovim sddm-kcm fastfetch npm wget alacritty fish
 sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
+cd ../
 echo "Copying a neovim config from someboy else"
 echo "-----------------------------------------"
 git clone -b v2.0 https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
