@@ -38,9 +38,10 @@ echo "Copying Fonts"
 echo "------------"
 sudo cp -fv $PWD/FiraMonoNerdFont-Regular.otf /usr/local/share/fonts/
 sudo cp -fv $PWD/PixelifySans-VariableFont_wght.ttf /usr/local/share/fonts/
-echo "Installing alacritty theme"
+echo "Installing alacritty themes"
 echo "--------------------------"
 curl https://raw.githubusercontent.com/Everblush/terminal-emulators/main/src/alacritty/Everblush.toml > ~/.config/alacritty/themes/everblush.toml
+curl https://raw.githubusercontent.com/zatchheems/tokyo-night-alacritty-theme/main/tokyo-night-storm.toml > ~/.config/alacritty/themes/tokyo.toml
 echo "Copying config files"
 echo "-------------------"
 cp -fv $PWD/alacritty.toml ~/.config/alacritty/alacritty.toml
