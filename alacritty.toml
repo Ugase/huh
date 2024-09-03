@@ -1,4 +1,4 @@
-import = ["~/.config/alacritty/themes/everblush.toml"]
+import = ["~/.config/alacritty/themes/tokyo.toml"]
 
 [cursor.style]
 blinking = "On"
@@ -15,10 +15,9 @@ style = "Regular"
 hide_when_typing = true
 
 [window]
-blur = true
 dynamic_padding = true
 dynamic_title = false
-opacity = 0.95
+opacity = 0.90
 title = "Terminal - Alacritty"
 
 [window.dimensions]
