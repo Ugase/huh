@@ -13,7 +13,7 @@ case $choice in
         ;;
     2) 
         TERMINAL_EMULATOR="konsole"
-        if ! [ -f "nice.profile" ]; then
+        if ! [ -f "good.profile" ]; then
           echo "The konsole profile is missing"
           exit 1
         fi
