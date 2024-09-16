@@ -1,7 +1,7 @@
 [Appearance]
 AntiAliasFonts=true
 ColorScheme=Tokyo Night
-Font=FiraCode Nerd Font Mono,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+Font=JetBrainsMono Nerd Font Mono,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 
 [Cursor Options]
 CursorShape=1
