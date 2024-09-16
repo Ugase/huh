@@ -17,7 +17,7 @@ case $choice in
 esac
 echo "Installing packages"
 echo "-------------------"
-sudo pacman -S --needed go neovim sddm-kcm fastfetch npm wget fish
+sudo pacman -S --needed go neovim fastfetch npm wget fish
 if [ "$TERMINAL_EMULATOR" = "alacritty" ]; then
     sudo pacman -S --needed alacritty
 elif [ "$TERMINAL_EMULATOR" = "konsole" ]; then
