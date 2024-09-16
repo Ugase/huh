@@ -29,7 +29,7 @@ curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fi
 echo "Copying a neovim config from someone else"
 echo "-----------------------------------------"
 git clone -b v2.0 https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
-m -rf ~/.config/nvim/lua/custom/
+rm -rf ~/.config/nvim/lua/custom/
 git clone https://github.com/dreamsofcode-io/neovim-python.git ~/.config/nvim/lua/custom/
 echo "Making directories"
 echo "------------------"
