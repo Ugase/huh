@@ -8,9 +8,11 @@ case $choice in
     "1") 
         TERMINAL_EMULATOR="alacritty"
         ;;
+    
     "2") 
         TERMINAL_EMULATOR="konsole"
         ;;
+    
     *)
         echo "Invalid choice. Please choose 1 or 2."
         exit 1
