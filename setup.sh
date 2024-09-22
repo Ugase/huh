@@ -15,7 +15,6 @@ case $choice in
     
     *)
         echo "Invalid choice. Please choose 1 or 2."
-        exit 1
         ;;
 esac
 echo "Installing packages"
