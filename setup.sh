@@ -4,7 +4,6 @@ echo "1. Alacritty"
 echo "2. Konsole"
 read -p "Enter your choice (1/2): " choice
 case $choice in
-
     "1") 
         TERMINAL_EMULATOR="alacritty"
         ;;
@@ -15,6 +14,7 @@ case $choice in
     
     *)
         echo "Invalid choice. Please choose 1 or 2."
+        exit 1
         ;;
 esac
 echo "Installing packages"
