@@ -4,6 +4,7 @@ echo "1. Alacritty"
 echo "2. Konsole"
 read -p "Enter your choice (1/2): " choice
 case $choice in
+
     "1") 
         TERMINAL_EMULATOR="alacritty"
         ;;
