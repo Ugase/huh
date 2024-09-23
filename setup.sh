@@ -50,7 +50,7 @@ echo "Downloading and Installing config files"
 echo "---------------------------------------"
 curl -L https://github.com/Ugase/huh/raw/main/config.jsonc > ~/.config/fastfetch/config.jsonc
 curl -L https://github.com/Ugase/huh/raw/main/config.fish > ~/.config/fish/config.fish
-fisher install jorgebucaran/hydro
+fish -c fisher install jorgebucaran/hydro
 if [ "$TERMINAL_EMULATOR" = "alacritty" ]; then
     curl -s https://raw.githubusercontent.com/zatchheems/tokyo-night-alacritty-theme/main/tokyo-night-storm.toml > ~/.config/alacritty/themes/tokyo.toml
     curl -L https://github.com/Ugase/huh/raw/main/alacritty.toml > ~/.config/alacritty/alacritty.toml
