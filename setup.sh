@@ -25,7 +25,10 @@ if [ "$TERMINAL_EMULATOR" = "alacritty" ]; then
 elif [ "$TERMINAL_EMULATOR" = "konsole" ]; then
     sudo pacman -S --needed konsole
 fi
-sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
+if ! command -v yay 2>&1 >/dev/null
+then
+    sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
+fi
 cd ../
 curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
 echo "Copying a neovim config from someone else"
