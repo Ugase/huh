@@ -32,7 +32,7 @@ if not emulator in ["alacritty", "konsole"]:
 if emulator == "konsole":
     files = [
         "./konsole/nice.profile/",
-        "./konsole/Tokyo night storm.colorscheme/",
+        "./konsole/Tokyonightstorm.colorscheme/",
         "./konsole/konsolerc/",
         "./fastfetch/",
         "./fish/",
@@ -42,7 +42,7 @@ if emulator == "konsole":
     ]
     dest = [
         f"{konsole}/nice.profile/",
-        f"{konsole}/Tokyo night storm.colorscheme/",
+        f"{konsole}/Tokyonightstorm.colorscheme/",
         f"{config}/konsolerc/",
         f"{config}/fastfetch/",
         f"{config}/fish",
