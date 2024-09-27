@@ -4,7 +4,10 @@
     "type": "small"
   },
   "modules": [
-    "os",
+    {
+      "type": "os",
+      "format": "{3}"
+    },
     "kernel",
     "packages",
     {
