@@ -5,7 +5,6 @@ import distro
 from rich import print as rprint
 import shutil
 
-
 def command_exists(cmd):
     return shutil.which(cmd) is not None
 
@@ -16,6 +15,12 @@ def move_files(files: list, dest: list):
     for f, d in zip(files, dest):
         os.system(f"mv {f} {d}")
         rprint(f"[bold blue]Moved [bold green]{f}[/] to [bold green]{d}[/][/]")
+
+def bulk_check(files: list):
+    for file in files:
+        if not os.path.exists(file):
+            rprint(f"[bold red][ERROR] {file} doesn't exist[/]")
+
 config = "~/.config/"
 konsole = "~/.local/share/konsole/"
 font = "~/.local/share/fonts/"
@@ -68,6 +73,7 @@ else:
         f"{font}/PixelifySans-VariableFont_wght.ttf",
     ]
 
+bulk_check(files)
 
 distro_name = distro.id()
 if distro_name != "arch":

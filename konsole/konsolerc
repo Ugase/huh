@@ -12,6 +12,9 @@ RememberWindowSize=false
 [MainWindow]
 ToolBarsMovable=Disabled
 
+[Notification Messages]
+CloseAllTabs=true
+
 [SaveHistory Settings]
 Recent URLs[$e]=file:$HOME
 

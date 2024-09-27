@@ -1,7 +1,7 @@
 [Appearance]
 AntiAliasFonts=true
 BorderWhenActive=false
-ColorScheme=Tokyo night storm
+ColorScheme=Tokyonightstorm
 EmojiFont=Noto Color Emoji,5.8,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 FocusBorderColor=36,40,59
 Font=JetBrainsMono Nerd Font Mono,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
@@ -17,6 +17,7 @@ Command=/usr/bin/fish
 InvertSelectionColors=false
 Name=nice
 Parent=FALLBACK/
+ShowTerminalSizeHint=false
 TerminalCenter=false
 TerminalColumns=106
 TerminalMargin=0
