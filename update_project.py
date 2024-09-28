@@ -13,14 +13,12 @@ konsole = f"{home}/.local/share/konsole/"
 font = f"{home}/.local/share/fonts/"
 
 kon = "./konsole/"
-fon = "./fonts/"
 
-rm = ["alacritty", "fastfetch", "fish", "fonts", "konsole"]
+rm = ["alacritty", "fastfetch", "fish", "konsole"]
 for d in rm:
     os.system(f"rm -rf {d}")
     rprint(f"[bold red]Removed {d}[/]")
 
-os.mkdir(fon)
 os.mkdir(kon)
 
 files = [
@@ -28,9 +26,6 @@ files = [
     f"{konsole}Tokyonightstorm.colorscheme",
     f"{config}konsolerc",
     f"{konsole}/catppuccin-frappe.colorscheme",
-    f"{font}FiraMonoNerdFont-Regular.otf",
-    f"{font}JetBrainsMonoNerdFontMono-Regular.ttf",
-    f"{font}PixelifySans-VariableFont_wght.ttf",
 ]
 
 dest = [
@@ -38,9 +33,6 @@ dest = [
     f"{kon}Tokyonightstorm.colorscheme",
     f"{kon}konsolerc",
     f"{kon}/catppuccin-frappe.colorscheme",
-    f"{fon}FiraMonoNerdFont-Regular.otf",
-    f"{fon}JetBrainsMonoNerdFontMono-Regular.ttf",
-    f"{fon}PixelifySans-VariableFont_wght.ttf",
 ]
 
 dirs = [f"{config}fastfetch/", f"{config}fish/", f"{config}alacritty/"]
