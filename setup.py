@@ -37,6 +37,11 @@ kon = "./konsole/"
 fon = "./fonts/"
 
 try:
+    os.mkdir(font)
+except:
+    pass
+
+try:
     emulator = sys.argv[1]
 except IndexError:
     rprint("[blue]Please enter konsole or alacritty (case sensitive)[/]")
