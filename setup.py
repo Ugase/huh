@@ -16,12 +16,6 @@ def move_files(files: list, dest: list):
         os.system(f"mv {f} {d}")
         rprint(f"[bold blue]Moved [bold green]{f}[/] to [bold green]{d}[/][/]")
 
-def bulk_check(files: list):
-    for file in files:
-        if not os.path.exists(file):
-            rprint(f"[bold red][ERROR] {file} doesn't exist[/]")
-            exit(1)
-
 home = os.environ.get("HOME")
 config = f"{home}/.config/"
 konsole = f"{home}/.local/share/konsole/"
@@ -41,7 +35,7 @@ if emulator == "konsole":
         "./konsole/nice.profile/",
         "./konsole/Tokyonightstorm.colorscheme/",
         "./konsole/konsolerc/",
-        "./konsole/ca"
+        "./konsole/catppuccin-frappe.colorscheme"
         "./fastfetch/",
         "./fish/",
         "./fonts/FiraMonoNerdFont-Regular.otf",
@@ -77,7 +71,6 @@ else:
         f"{font}/PixelifySans-VariableFont_wght.ttf",
     ]
 
-bulk_check(files)
 
 distro_name = distro.id()
 if distro_name != "arch":
@@ -96,6 +89,7 @@ os.system(f"rm -rf {home}/.config/nvim/lua/custom/")
 os.system(f"git clone https://github.com/dreamsofcode-io/neovim-python.git {home}/.config/nvim/lua/custom/")
 rprint("[bold green]Moving config files[/]")
 move_files(files, dest)
+os.system("""fish -c 'fish_config theme save "Catppuccin Frappe"'""")
 rprint(f"Cleaning up")
 os.chdir("../")
 os.system("rm -rf huh/")
