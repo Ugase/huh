@@ -5,6 +5,11 @@ import distro
 from rich import print as rprint
 import shutil
 
+rprint("[bold yellow]i will kill your config do you wish to proceed [y/N]: [/]", end="")
+tr = input()
+if tr.lower() != "y":
+    exit(0)
+
 def command_exists(cmd):
     return shutil.which(cmd) is not None
 
@@ -13,7 +18,7 @@ def move_files(files: list, dest: list):
     if len(files) != len(dest):
         raise ValueError("Not right length!")
     for f, d in zip(files, dest):
-        os.system(f"mv {f} {d}")
+        os.system(f"mv -f {f} {d}")
         rprint(f"[bold blue]Moved [bold green]{f}[/] to [bold green]{d}[/][/]")
 
 home = os.environ.get("HOME")
