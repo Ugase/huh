@@ -1,7 +1,7 @@
 [Appearance]
 AntiAliasFonts=true
 BorderWhenActive=false
-ColorScheme=Tokyonightstorm
+ColorScheme=catppuccin-frappe
 EmojiFont=Noto Color Emoji,5.8,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 FocusBorderColor=36,40,59
 Font=JetBrainsMono Nerd Font Mono,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1

@@ -20,10 +20,12 @@ def bulk_check(files: list):
     for file in files:
         if not os.path.exists(file):
             rprint(f"[bold red][ERROR] {file} doesn't exist[/]")
+            exit(1)
 
-config = "~/.config/"
-konsole = "~/.local/share/konsole/"
-font = "~/.local/share/fonts/"
+home = os.environ.get("HOME")
+config = f"{home}/.config/"
+konsole = f"{home}/.local/share/konsole/"
+font = f"{home}/.local/share/fonts/"
 
 try:
     emulator = sys.argv[1]
@@ -39,6 +41,7 @@ if emulator == "konsole":
         "./konsole/nice.profile/",
         "./konsole/Tokyonightstorm.colorscheme/",
         "./konsole/konsolerc/",
+        "./konsole/ca"
         "./fastfetch/",
         "./fish/",
         "./fonts/FiraMonoNerdFont-Regular.otf",
@@ -49,6 +52,7 @@ if emulator == "konsole":
         f"{konsole}/nice.profile/",
         f"{konsole}/Tokyonightstorm.colorscheme/",
         f"{config}/konsolerc/",
+        f"{konsole}/catppuccin-frappe.colorscheme"
         f"{config}/fastfetch/",
         f"{config}/fish",
         f"{font}/FiraMonoNerdFont-Regular.otf",
@@ -85,13 +89,14 @@ if not command_exists("yay"):
         "sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si"
     )
 os.system("yay -S --needed fastfetch-git")
-os.system("rm -rf ~/.config/nvim")
+os.system(f"rm -rf {home}/.config/nvim")
 rprint("[bold green] Copying a neovim cofig from someone else[/]")
-os.system("git clone -b v2.0 https://github.com/NvChad/NvChad ~/.config/nvim --depth 1")
-os.system("rm -rf ~/.config/nvim/lua/custom/")
-os.system("git clone https://github.com/dreamsofcode-io/neovim-python.git ~/.config/nvim/lua/custom/")
+os.system(f"git clone -b v2.0 https://github.com/NvChad/NvChad {home}/.config/nvim --depth 1")
+os.system(f"rm -rf {home}/.config/nvim/lua/custom/")
+os.system(f"git clone https://github.com/dreamsofcode-io/neovim-python.git {home}/.config/nvim/lua/custom/")
 rprint("[bold green]Moving config files[/]")
 move_files(files, dest)
+os.system("""fish -c 'fish_config theme save "Catppuccin Frappe"'""")
 rprint(f"Cleaning up")
 os.chdir("../")
 os.system("rm -rf huh/")
