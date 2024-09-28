@@ -32,9 +32,9 @@ if not emulator in ["alacritty", "konsole"]:
     exit(1)
 if emulator == "konsole":
     files = [
-        "./konsole/nice.profile/",
-        "./konsole/Tokyonightstorm.colorscheme/",
-        "./konsole/konsolerc/",
+        "./konsole/nice.profile",
+        "./konsole/Tokyonightstorm.colorscheme",
+        "./konsole/konsolerc",
         "./konsole/catppuccin-frappe.colorscheme",
         "./fastfetch/",
         "./fish/",
@@ -43,12 +43,12 @@ if emulator == "konsole":
         "./fonts/PixelifySans-VariableFont_wght.ttf",
     ]
     dest = [
-        f"{konsole}/nice.profile/",
-        f"{konsole}/Tokyonightstorm.colorscheme/",
-        f"{config}/konsolerc/",
+        f"{konsole}/nice.profile",
+        f"{konsole}/Tokyonightstorm.colorscheme",
+        f"{config}/konsolerc",
         f"{konsole}/catppuccin-frappe.colorscheme",
         f"{config}/fastfetch/",
-        f"{config}/fish",
+        f"{config}/fish/",
         f"{font}/FiraMonoNerdFont-Regular.otf",
         f"{font}/JetBrainsMonoNerdFontMono-Regular.ttf",
         f"{font}/PixelifySans-VariableFont_wght.ttf",
@@ -65,7 +65,7 @@ else:
     dest = [
         f"{config}/alacritty/",
         f"{config}/fastfetch/",
-        f"{config}/fish",
+        f"{config}/fish/",
         f"{font}/FiraMonoNerdFont-Regular.otf",
         f"{font}/JetBrainsMonoNerdFontMono-Regular.ttf",
         f"{font}/PixelifySans-VariableFont_wght.ttf",
