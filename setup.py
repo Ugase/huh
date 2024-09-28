@@ -35,7 +35,7 @@ if emulator == "konsole":
         "./konsole/nice.profile/",
         "./konsole/Tokyonightstorm.colorscheme/",
         "./konsole/konsolerc/",
-        "./konsole/catppuccin-frappe.colorscheme"
+        "./konsole/catppuccin-frappe.colorscheme",
         "./fastfetch/",
         "./fish/",
         "./fonts/FiraMonoNerdFont-Regular.otf",
@@ -46,7 +46,7 @@ if emulator == "konsole":
         f"{konsole}/nice.profile/",
         f"{konsole}/Tokyonightstorm.colorscheme/",
         f"{config}/konsolerc/",
-        f"{konsole}/catppuccin-frappe.colorscheme"
+        f"{konsole}/catppuccin-frappe.colorscheme",
         f"{config}/fastfetch/",
         f"{config}/fish",
         f"{font}/FiraMonoNerdFont-Regular.otf",
