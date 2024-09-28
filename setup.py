@@ -22,7 +22,7 @@ def copy_files(files: list, dest: list):
         os.system(f"cp -f {f} {d}")
         rprint(f"[bold blue]Copied [bold green]{f}[/] to [bold green]{d}[/][/]")
 
-def copy_files(files: list, dest: list):
+def copy_dirs(files: list, dest: list):
     if len(files) != len(dest):
         raise ValueError("Not right length!")
     for f, d in zip(files, dest):
@@ -56,9 +56,6 @@ if emulator == "konsole":
         "./konsole/Tokyonightstorm.colorscheme",
         "./konsole/konsolerc",
         "./konsole/catppuccin-frappe.colorscheme",
-        "./fonts/FiraMonoNerdFont-Regular.otf",
-        "./fonts/JetBrainsMonoNerdFontMono-Regular.ttf",
-        "./fonts/PixelifySans-VariableFont_wght.ttf",
     ]
     dirs = [
         "./fastfetch/",
@@ -73,19 +70,8 @@ if emulator == "konsole":
         f"{konsole}/Tokyonightstorm.colorscheme",
         f"{config}/konsolerc",
         f"{konsole}/catppuccin-frappe.colorscheme",
-        f"{font}/FiraMonoNerdFont-Regular.otf",
-        f"{font}/JetBrainsMonoNerdFontMono-Regular.ttf",
-        f"{font}/PixelifySans-VariableFont_wght.ttf",
     ]
 else:
-    files = [
-        "./alacritty/",
-        "./fastfetch/",
-        "./fish/",
-        "./fonts/FiraMonoNerdFont-Regular.otf",
-        "./fonts/JetBrainsMonoNerdFontMono-Regular.ttf",
-        "./fonts/PixelifySans-VariableFont_wght.ttf",
-    ]
     dirs = [
         "./alacritty/",
         "./fastfetch/",
@@ -95,11 +81,6 @@ else:
         f"{config}/alacritty/"
         f"{config}/fastfetch/",
         f"{config}/fish/",
-    ]
-    dest = [
-        f"{font}/FiraMonoNerdFont-Regular.otf",
-        f"{font}/JetBrainsMonoNerdFontMono-Regular.ttf",
-        f"{font}/PixelifySans-VariableFont_wght.ttf",
     ]
 
 
@@ -124,6 +105,7 @@ os.system(
 )
 rprint("[bold green]Moving config files[/]")
 copy_files(files, dest)
+copy_dirs(dirs, dirsd)
 os.system("""fish -c 'fish_config theme save "Catppuccin Frappe"'""")
 rprint(f"Cleaning up")
 os.chdir("../")
