@@ -5,7 +5,13 @@ import distro
 from rich import print as rprint
 import shutil
 
-rprint("[bold yellow]i will kill your config do you wish to proceed: [/]", end="")
+try:
+    emulator = sys.argv[1]
+except IndexError:
+    rprint("[blue]Please enter konsole or alacritty (case sensitive)[/]")
+    exit(1)
+
+rprint("[bold yellow]I will kill your config do you wish to proceed: [/]", end="")
 tr = input()
 if tr.lower() != "y":
     exit(0)
@@ -19,14 +25,18 @@ def copy_files(files: list, dest: list):
     if len(files) != len(dest):
         raise ValueError("Not right length!")
     for f, d in zip(files, dest):
-        os.system(f"cp -f {f} {d}")
+        if os.system(f"cp -f {f} {d}") > 0:
+            rprint("[bold red]An error has occurred[/]")
+            exit(1)
         rprint(f"[bold blue]Copied [bold green]{f}[/] to [bold green]{d}[/][/]")
 
 def copy_dirs(files: list, dest: list):
     if len(files) != len(dest):
         raise ValueError("Not right length!")
     for f, d in zip(files, dest):
-        os.system(f"cp -fr {f} {d}")
+        if os.system(f"cp -fr {f} {d}") > 0:
+            rprint("[bold red]An error has occurred[/]")
+            exit(1)
         rprint(f"[bold blue]Copied [bold green]{f}[/] to [bold green]{d}[/][/]")
 
 home = os.environ.get("HOME")
@@ -41,11 +51,6 @@ try:
 except:
     pass
 
-try:
-    emulator = sys.argv[1]
-except IndexError:
-    rprint("[blue]Please enter konsole or alacritty (case sensitive)[/]")
-    exit(1)
 
 if not emulator in ["alacritty", "konsole"]:
     rprint("[red]Choose either konsole or alacritty (case sensitive)[/]")
