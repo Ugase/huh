@@ -1,47 +1,88 @@
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
-  "logo": {"padding": {"top": 1, "left": 1,"right": 2}, "type": "small", "color": {"1": "blue", "2": "blue"}},
+  "logo": {"padding": {"left": 2,"right": 5}, "color": {"1": "38;2;244;184;228", "2": "38;2;244;184;228"}},
   "display": {"separator": ": "},
   "modules": [
+    "break",
     {
       "type": "custom",
-      "format": "╭────────────────────────────────╮"
+      "format": "╭────────────────────Hardware info────────────────────╮"
+    },
+    {
+      "type": "cpu",
+      "key": "{#38;2;244;184;228}  CPU",
+      "format": "{name} {freq-max}"
+    },
+    
+    {
+      "type": "memory",
+      "key": "{#38;2;244;184;228}  Memory",
+      "format": "{1} / {2} {4} {3}"
+    },
+    {
+      "type": "disk",
+      "key": "{#38;2;244;184;228}  Disk",
+      "format": "{1} / {2} {13} - {9}"
+    },
+    {
+      "type": "monitor",
+      "key": "{#38;2;244;184;228}  Monitor",
+      "format": "{2}x{3} px"
+    },
+    {
+      "type": "custom",
+      "format": "╰─────────────────────────────────────────────────────╯"
+    },
+    "break",
+    {
+      "type": "custom",
+      "format": "╭────────────────────Software info────────────────────╮"
     },
     {
       "type": "os",
       "format": "{3}",
-      "key": "{#0}│{#94} OS"
+      "key": "{#38;2;244;184;228}  OS"
     },
     {
       "type": "kernel",
-      "key": "{#0}│{#94} Kernel"
+      "key": "{#38;2;244;184;228}  Kernel"
     },
     {
       "type": "packages",
-      "key": "{#0}│{#94} Packages"
+      "key": "{#38;2;244;184;228}  Packages"
     },
     {
       "type": "terminal",
       "format": "{}",
-      "key": "{#0}│{#94} Terminal"
+      "key": "{#38;2;244;184;228}  Terminal"
+    },
+    {
+      "type": "terminalfont",
+      "key": "{#38;2;244;184;228}  Terminal font"
     },
     {
       "type": "shell",
       "format": "{}",
-      "key": "{#0}│{#94} Shell"
+      "key": "{#38;2;244;184;228}  Shell"
     },
     {
       "type": "de",
-      "key": "{#0}│{#94} DE"
+      "key": "{#38;2;244;184;228}  DE"
     },
     {
       "type": "uptime",
-      "key": "{#0}│{#94} Uptime"
+      "key": "{#38;2;244;184;228}  Uptime"
     },
     {
       "type": "custom",
-      "format": "╰────────────────────────────────╯"
-    }
+      "format": "╰─────────────────────────────────────────────────────╯"
+    },
+    {
+      "type": "colors",
+      "symbol": "circle",
+      "paddingLeft": 19
+    },
+    "break"
   ]
 }
 
