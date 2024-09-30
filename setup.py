@@ -25,19 +25,13 @@ def copy_files(files: list, dest: list):
     if len(files) != len(dest):
         raise ValueError("Not right length!")
     for f, d in zip(files, dest):
-        if os.system(f"cp -f {f} {d}") > 0:
-            rprint("[bold red]An error has occurred[/]")
-            exit(1)
-        rprint(f"[bold blue]Copied [bold green]{f}[/] to [bold green]{d}[/][/]")
+        if os.system(f"cp -fv {f} {d}") > 0: exit(1)
 
 def copy_dirs(files: list, dest: list):
     if len(files) != len(dest):
         raise ValueError("Not right length!")
     for f, d in zip(files, dest):
-        if os.system(f"cp -fr {f} {d}") > 0:
-            rprint("[bold red]An error has occurred[/]")
-            exit(1)
-        rprint(f"[bold blue]Copied [bold green]{f}[/] to [bold green]{d}[/][/]")
+        if os.system(f"cp -frv {f} {d}") > 0: exit(1)
 
 home = os.environ.get("HOME")
 config = f"{home}/.config/"
@@ -48,6 +42,10 @@ fon = "./fonts/"
 
 try:
     os.mkdir(font)
+except:
+    pass
+try:
+    os.mkdir(f"{home}/.config/fish/themes")
 except:
     pass
 
