@@ -65,8 +65,8 @@ if emulator == "konsole":
         "./fish/",
     ]
     dirsd = [
-        f"{config}/fastfetch/",
-        f"{config}/fish/",
+        f"{config}",
+        f"{config}",
     ]
     dest = [
         f"{konsole}/nice.profile",
@@ -81,9 +81,9 @@ else:
         "./fish/",
     ]
     dirsd = [
-        f"{config}/alacritty/"
-        f"{config}/fastfetch/",
-        f"{config}/fish/",
+        f"{config}"
+        f"{config}",
+        f"{config}",
     ]
 
 
