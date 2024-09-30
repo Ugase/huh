@@ -1,87 +1,96 @@
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
-  "logo": {"padding": {"left": 2,"right": 5}, "color": {"1": "38;2;244;184;228", "2": "38;2;244;184;228"}},
-  "display": {"separator": ": "},
+  "logo": {"padding": {"left": 2,"right": 5}, "color": {"1": "38;2;244;184;228", "2": "38;2;244;184;228"}, "source": "arch2"},
+  "display": {"separator": "  "},
   "modules": [
     "break",
     {
       "type": "custom",
-      "format": "╭────────────────────Hardware info────────────────────╮"
+      "format": "┌────────────────────Hardware info────────────────────┐"
     },
     {
       "type": "cpu",
-      "key": "{#38;2;244;184;228}  CPU",
+      "key": "  ",
+      "keyColor": "38;2;244;184;228",
       "format": "{name} {freq-max}"
     },
     
     {
       "type": "memory",
-      "key": "{#38;2;244;184;228}  Memory",
+      "key": "  ",
+      "keyColor": "38;2;244;184;228",
       "format": "{1} / {2} {4} {3}"
     },
     {
       "type": "disk",
-      "key": "{#38;2;244;184;228}  Disk",
-      "format": "{1} / {2} {13} - {9}"
+      "key": "  󰋊",
+      "keyColor": "38;2;244;184;228",
+      "format": "{1} / {2} {13} {3} - {9}"
     },
     {
       "type": "monitor",
-      "key": "{#38;2;244;184;228}  Monitor",
+      "key": "  󰍹",
+      "keyColor": "38;2;244;184;228",
       "format": "{2}x{3} px"
     },
     {
       "type": "custom",
-      "format": "╰─────────────────────────────────────────────────────╯"
-    },
-    "break",
-    {
-      "type": "custom",
-      "format": "╭────────────────────Software info────────────────────╮"
+      "format": "│────────────────────Software info────────────────────│"
     },
     {
       "type": "os",
       "format": "{3}",
-      "key": "{#38;2;244;184;228}  OS"
+      "key": "  󰣇",
+      "keyColor": "38;2;244;184;228"
     },
     {
       "type": "kernel",
-      "key": "{#38;2;244;184;228}  Kernel"
+      "key": "  ",
+      "keyColor": "38;2;244;184;228"
     },
     {
       "type": "packages",
-      "key": "{#38;2;244;184;228}  Packages"
+      "key": "  󰏗",
+      "keyColor": "38;2;244;184;228"
     },
     {
       "type": "terminal",
       "format": "{}",
-      "key": "{#38;2;244;184;228}  Terminal"
-    },
-    {
-      "type": "terminalfont",
-      "key": "{#38;2;244;184;228}  Terminal font"
+      "key": "  ",
+      "keyColor": "38;2;244;184;228"
     },
     {
       "type": "shell",
       "format": "{}",
-      "key": "{#38;2;244;184;228}  Shell"
+      "key": "  ",
+      "keyColor": "38;2;244;184;228"
+    },
+    {
+      "type": "terminalfont",
+      "key": "  ",
+      "keyColor": "38;2;244;184;228",
     },
     {
       "type": "de",
-      "key": "{#38;2;244;184;228}  DE"
+      "key": "  ",
+      "keyColor": "38;2;244;184;228"
     },
     {
       "type": "uptime",
-      "key": "{#38;2;244;184;228}  Uptime"
+      "key": "  ",
+      "keyColor": "38;2;244;184;228"
     },
     {
       "type": "custom",
-      "format": "╰─────────────────────────────────────────────────────╯"
+      "format": "└─────────────────────────────────────────────────────┘"
     },
     {
       "type": "colors",
       "symbol": "circle",
       "paddingLeft": 19
     },
+    "break",
+    "break",
     "break"
   ]
 }
