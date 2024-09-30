@@ -7,5 +7,5 @@
 ## Installation
 
 ```sh
-git clone --depth=1 https://github.com/Ugase/huh && cd huh && python setup.py (terminal_emulator)
+git clone --depth=1 https://github.com/Ugase/huh && cd huh && python setup.py (terminal_emulator) && cd ..
 ```
