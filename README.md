@@ -1,6 +1,5 @@
 ## Dependencies
 - python
-- python-rich
 - konsole or alacritty
 
 

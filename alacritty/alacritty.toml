@@ -8,7 +8,7 @@ shape = "Beam"
 size = 13.25
 
 [font.normal]
-family = "FiraMono Nerd Font Mono"
+family = "JetBrainsMono Nerd Font Mono"
 style = "Regular"
 
 [mouse]
