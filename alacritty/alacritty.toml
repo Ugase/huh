@@ -1,11 +1,15 @@
-import = ["~/.config/alacritty/themes/tokyo.toml"]
+import = [
+    "/home/denzel/.config/alacritty/themes/themes/catppuccin_frappe.toml",
+]
+
+[shell]
+program = "/usr/bin/fish"
 
 [cursor.style]
 blinking = "On"
-shape = "Beam"
 
 [font]
-size = 13.25
+size = 12
 
 [font.normal]
 family = "JetBrainsMono Nerd Font Mono"
@@ -17,12 +21,12 @@ hide_when_typing = true
 [window]
 dynamic_padding = true
 dynamic_title = false
-opacity = 0.90
+opacity = 1
 title = "Terminal - Alacritty"
 
 [window.dimensions]
-columns = 100
-lines = 30
+columns = 106
+lines = 31
 
 [window.padding]
 x = 2
