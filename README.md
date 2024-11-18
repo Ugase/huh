@@ -1,6 +1,9 @@
 ## Dependencies
 - python
 - konsole or alacritty
+- less
+- nano (Optional)
+- Jetbrains Mono Nerd font mono
 
 
 ## Installation
