@@ -4,7 +4,7 @@
 - less
 - nano (Optional)
 - Jetbrains Mono Nerd font mono
-
+- zoxide
 
 ## Installation
 
